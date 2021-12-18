@@ -1,0 +1,12 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Update street_house</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <form action="{% url 'update_street_house' street_house.pk %}" method="POST" class="form">
+        {% csrf_token %} {% include 'street_house/street_house_form.html' with street_house=street_house %}
+        <button type="submit" class="btn btn-primary">Save</button>
+    </form>
+</div>
+{% endblock content %}

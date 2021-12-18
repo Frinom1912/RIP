@@ -1,0 +1,25 @@
+{% load static %}
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark p-3">
+    <a class="navbar-brand ml-5" href="{% url 'main' %}">Bondarenko</a>
+
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a href="{% url 'main' %}" class="nav-link">Main Page</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_house' %}" class="nav-link">All houses</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_house' %}" class="nav-link">Create house</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'read_street_house' %}" class="nav-link">All street_houses</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'create_street_house' %}" class="nav-link">Create street_house</a>
+        </li>
+        <li class="nav-item">
+            <a href="{% url 'report' %}" class="nav-link">Report</a>
+        </li>
+    </ul>
+</nav>

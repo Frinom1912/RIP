@@ -1,0 +1,11 @@
+{% load static %}
+
+<div class="card m-3" style="width: 18rem">
+    <img src="{% static 'img/house.png' %}" class="card-img-top" alt="..." />
+    <div class="card-body">
+        <h5 class="card-title">{{ street_house.name }}</h5>
+        <p class="card-text">{{ street_house.city }}</p>
+        <a href="{% url 'delete_street_house' street_house.pk %}" class="btn btn-danger"> Delete </a>
+        <a href="{% url 'update_street_house' street_house.pk %}" class="btn btn-primary"> Update </a>
+    </div>
+</div>

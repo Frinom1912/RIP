@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All houses</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-column">
+    {% for house in houses %} {% include 'house/house_card.html' with house=house %} {% endfor %}
+</div>
+{% endblock content %}

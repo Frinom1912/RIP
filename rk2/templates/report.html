@@ -1,0 +1,22 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">Report Page</h1>
+</div>
+<!-- Page Content -->
+<div>
+    <h1>Sorted houses</h1>
+    {% for street in sortet_streets %} {% include 'street_house/street_house_card.html' with street_house=street %} {% endfor %}
+</div>
+
+<div>
+    <h1>Number of citizens</h1>
+    <div class="d-flex flex-wrap">
+        {% for num_of_citizen in num_of_citizens %}
+        <div class="d-flex flex-column align-center" >
+            <h3 class="text-center">Number of citizens {{ num_of_citizen.num_of_citizens }}</h3>
+            {% include 'street_house/street_house_card.html' with street_house=num_of_citizen.street_house %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

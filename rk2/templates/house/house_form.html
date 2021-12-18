@@ -1,0 +1,23 @@
+<div class="mb-3">
+    <label for="houseName" class="form-label">house Name</label>
+    <input type="text" name="name" value="{{ house.name }}" class="form-control" id="houseName" />
+</div>
+
+<div class="mb-3">
+    <label for="houseNumber" class="form-label">house Number</label>
+    <input type="number" min="0" name="house_number" value="{{ house.house_number }}" required="required" class="form-control" id="houseNumber" />
+</div>
+
+<div class="mb-3">
+    <label for="houseCitizens" class="form-label">house number of citizens</label>
+    <input type="number" min="0" name="num_of_citizens" value="{{ house.num_of_citizens }}" required="required" class="form-control" id="houseCitizens" />
+</div>
+
+<div class="mb-3">
+    <label for="housestreet_house" class="form-label">Select street_house</label>
+    <select name="street_house" class="form-select" aria-label="Default select example" id="housestreet_house">
+        {% for street_house in street_houses %}
+        <option value="{{ street_house.pk }}">{{ street_house.name }}</option>
+        {% endfor %}
+    </select>
+</div>

@@ -1,0 +1,9 @@
+{% extends 'inc/base.html' %} {% load static %} {% block content %}
+<div class="container">
+    <h1 class="text-center mt-4">All street_houses</h1>
+</div>
+<!-- Page Content -->
+<div class="d-flex flex-wrap">
+    {% for street_house in street_houses %} {% include 'street_house/street_house_card.html' with street_house=street_house %} {% endfor %}
+</div>
+{% endblock content %}

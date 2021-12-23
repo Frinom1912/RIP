@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Список отелей{% endblock %}
+
+{% block content %}
+<ul>
+    {% for hotel in data.hotels %}
+       <li><a href="{% url 'hotel_url' hotel.id %}">{{hotel.name}}</a></li>
+    {% empty %}
+        <li>Список пуст</li>
+    {% endfor %}
+</ul>
+{% endblock %}

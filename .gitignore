@@ -1,8 +1,9 @@
 /venv/
-/node_modules/
+*/node_modules/*
 lib64
 .env
 db.sqlite3
 migrations
 __pycache__
 /.vscode
+package*.json

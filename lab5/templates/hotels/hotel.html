@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %}Отель №{{ data.hotel.id }}{% endblock %}
+
+{% block content %}
+    <div>Название: {{ data.hotel.name }}</div>
+    <div>Ссылка: <a href="{{data.hotel.url}}">{{data.hotel.url}}</a></div>
+    <div>Количество звезд: {{ data.hotel.stars }}</div>
+    <div>Код страны: {{ data.hotel.country_code }}</div>
+{% endblock %}

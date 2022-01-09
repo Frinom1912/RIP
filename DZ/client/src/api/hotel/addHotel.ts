@@ -1,11 +1,6 @@
 import { HotelDataType } from 'api/types';
 
 export const addHotel = async (values: Partial<HotelDataType>) => {
-  // const newValues: HotelDataType = {
-  //   stars: parseInt(values.stars),
-  //   country_code: parseInt(values.country_code),
-  //   ...values,
-  // };
   const body = new FormData();
   for (const [key, value] of Object.entries(values)) {
     body.append(key, value.toString());

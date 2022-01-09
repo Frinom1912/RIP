@@ -1,8 +1,8 @@
-import { HotelDataType } from 'api/types';
+import { CountryDataType } from 'api/types';
 
 export const updateCountryById = async (
   id: number,
-  values: Partial<HotelDataType>,
+  values: Partial<CountryDataType>,
 ) => {
   const body = new FormData();
   for (const [key, value] of Object.entries(values)) {

@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    background-color: #181a1b;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+::-webkit-scrollbar {
+    background: #181a1b;
+    width: 8px;
+}
+
+ ::-webkit-scrollbar-track {
+    border-radius: 4px;
+}
+
+ ::-webkit-scrollbar-thumb {
+    background: #373B47;
+    border-radius: 4px;
+}
